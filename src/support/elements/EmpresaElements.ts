@@ -7,6 +7,10 @@ export default class EmpresaElements extends BaseElements {
     this.page = page;
   }
 
+  getBotaoAceitarCookies(): Locator {
+    return this.page.locator('text=Aceitar Cookies');
+  }
+
   getCampoAssunto(): Locator {
     return this.page.locator('#mui-component-select-subject');
   }

@@ -13,6 +13,7 @@ export default class EmpresaPage extends BasePage {
   }
 
   async preencherCamposValidos(): Promise<void> {
+    await this.empresaElements.getBotaoAceitarCookies().click();
     await this.empresaElements.getCampoAssunto().click();
     await this.empresaElements.getValorDemo().click();
     await this.empresaElements.getCampoNome().fill(faker.person.firstName());
